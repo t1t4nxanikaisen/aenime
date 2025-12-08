@@ -82,7 +82,7 @@ function Sidecard({ data, label, className, limit }) {
                 />
                 <div className="flex flex-col ml-4 space-y-2">
                   <Link
-                    to={`/${item.id}`}
+                    to={`/watch/${item.id}`}
                     className="text-[1em] font-[500] hover:cursor-pointer hover:text-[#B24B92] transform transition-all ease-out line-clamp-1 max-[478px]:line-clamp-2 max-[478px]:text-[14px]"
                     onClick={() =>
                       window.scrollTo({ top: 0, behavior: "smooth" })

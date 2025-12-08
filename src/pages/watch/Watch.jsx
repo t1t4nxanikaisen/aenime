@@ -380,7 +380,7 @@ export default function Watch() {
                   <div className="flex flex-wrap gap-4 max-[575px]:grid max-[575px]:grid-cols-3 max-[575px]:gap-3 max-[480px]:grid-cols-2">
                     {seasons.map((season, index) => (
                       <Link
-                        to={`/${season.id}`}
+                        to={`/watch/${season.id}`}
                         key={index}
                         className={`relative w-[20%] h-[60px] rounded-lg overflow-hidden cursor-pointer group ${
                           animeId === String(season.id)

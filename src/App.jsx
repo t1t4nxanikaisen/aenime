@@ -16,6 +16,7 @@ import Watch from "./pages/watch/Watch";
 import Producer from "./components/producer/Producer";
 import SplashScreen from "./components/splashscreen/SplashScreen";
 import DonatePage from "./pages/donate/donate";
+import proxyWarmup from "./utils/proxyWarmup.utils";
 
 function App() {
   const location = useLocation();
@@ -24,6 +25,11 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+  useEffect(() => {
+    proxyWarmup.smartWarmup();
+    return () => proxyWarmup.cleanup();
+  }, [location.pathname]);
 
   // Check if the current route is for the splash screen
   const isSplashScreen = location.pathname === "/";

@@ -80,7 +80,7 @@ function Cart({ label, data, path }) {
 
               <div className="flex flex-col ml-4 space-y-2 w-full">
                 <Link
-                  to={`/${item.id}`}
+                  to={`/watch/${item.id}`}
                   className="w-full line-clamp-2 text-[1em] font-[500] hover:cursor-pointer hover:text-[#B24B92] transform transition-all ease-out max-[1200px]:text-[14px]"
                 >
                   {language === "EN" ? item.title : item.japanese_title}
